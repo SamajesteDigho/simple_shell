@@ -9,5 +9,25 @@
  */
 int main(int argc, char **argv, char **env)
 {
+char *input;
+char *prefix;
+char **commands;
+if (argc > 1)
+{
+prefix = argv[1];
+strcat(prefix, "$ ");
+}
+else
+{
+prefix = "($) ";
+}
+input = (char *)malloc(MAX_BUFFER_SIZE * sizeof(char));
+while (1 == 1)
+{
+print_console(input, prefix);
+commands = split_line_to_array(input, ' ');
+executor(commands, env);
+memset(input, 0, MAX_BUFFER_SIZE);
+}
 return (0);
 }
