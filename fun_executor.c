@@ -19,15 +19,15 @@ if (process != -1 && process == 0)
 {
 if (execve(path, command, env) == -1)
 {
-perror(command[0]);
+perror("command[0] Inside");
 exit(98);
 }
 exit(0);
 }
 wait(&status);
 }
-else
+/*else
 {
-perror(command[0]);
-}
+perror("command[0]");
+}*/
 }
