@@ -10,7 +10,6 @@ void manage_special_keys(char *state)
 /* If CTRL+D was pressed */
 if (state == NULL)
 {
-printf("\n");
 exit(0);
 }
 else if (strncmp(state, "exit", 4) == 0)
