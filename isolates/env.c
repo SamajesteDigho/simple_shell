@@ -6,27 +6,19 @@
 /**
  * _getnv
  * @name: The name of the variable to be collected.
- * Description: Permits to collect the value of the environment varibles given the name.
+ * Description: Permits to collect the value of the env vars given the name.
  * Return: The vlue of the variable if it exist and NULL otherwise.
  */
 char *get_env_value(const char *name)
 {
-int pos;
-int i;
-int name_size;
-int similar;
-char *cursor;
-char *value;
-char *bushi;
+int pos, i, name_size, similar;
+char *cursor, *value, *bushi;
 bushi = "";
-
 if (name == NULL || name == bushi)
 {
 return (NULL);
 }
-pos = 0;
-similar = 0;
-name_size = 0;
+pos = similar = name_size = 0;
 cursor = __environ[pos];
 while (cursor)
 {
@@ -49,8 +41,7 @@ if (similar == 1)
 {
 break;
 }
-pos++;
-cursor = __environ[pos];
+cursor = __environ[pos++];
 }
 if (similar == 1)
 {
@@ -59,8 +50,7 @@ name_size = name_size + 2;
 i = name_size;
 while (cursor[i] != '\0' && cursor[i] != '\n' && i < 1024)
 {
-value[i - name_size] = cursor[i];
-i++;
+value[i - name_size] = cursor[i++];
 }
 cursor[i] = '\0';
 return (value);
@@ -75,7 +65,7 @@ return (NULL);
  * Description: Here is the main source file for entring the program
  * Return: Always returns 0
  */
-int print_environment()
+int print_environment(void)
 {
 printf("USER=%s\n", get_env_value("USER"));
 printf("LANGUAGE=%s\n", get_env_value("LANGUAGE"));
@@ -97,7 +87,8 @@ return (0);
  * Description: Here is the main source file for entring the program
  * Return: Always returns 0
  */
-int main(){
+int main(void)
+{
 print_environment();
 return (0);
 }
