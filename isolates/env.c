@@ -71,7 +71,9 @@ return (NULL);
 }
 }
 /**
- *
+ * print_environment
+ * Description: Here is the main source file for entring the program
+ * Return: Always returns 0
  */
 int print_environment()
 {

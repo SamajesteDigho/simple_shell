@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- * split_line_to_array
+ * split_line_to_array - Line to array splitter
  * @line: The line to split
  * @delim: The delimiter character
  * Description: This functions splits the line to words

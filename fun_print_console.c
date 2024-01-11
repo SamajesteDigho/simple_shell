@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- * manage_special_keys
+ * manage_special_keys - Manage special key press
  * @state: State of the special key
  * Description: Manage the special keys which are pressed.
  * Return: Nothing yet
@@ -20,7 +20,7 @@ exit(0);
 }
 
 /**
- * print_console
+ * _getline - Get line from console
  * @input: The buffer which will contain the inputed string.
  * @buf_size: The size of the input buffer.
  * @stream: The stream for listening the character input
@@ -47,7 +47,7 @@ return (input);
 }
 
 /**
- * print_console
+ * print_console - Console display
  * @input: The buffer which will contain the inputed string.
  * @prefix: The string to be printed at the start of the console.
  * Description: Prints the console string waiting for input.

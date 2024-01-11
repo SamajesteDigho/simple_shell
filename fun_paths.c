@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- * collect_path
+ * collect_path - Path collector
  * @file: The name of the file to execute or the file path
  * Description: Permits to get the file to be executed path
  * Return: String of the file path if file found or NULL otherwise.
@@ -31,7 +31,7 @@ return (extract_path_from_bin(file));
 }
 
 /**
- * is_path
+ * is_path - Is path checker
  * @path: The path to be checked
  * Description: Check if a string is a file or a path
  * Return: 0 = false or 1 = true
@@ -55,7 +55,7 @@ return (is_path);
 }
 
 /**
- * get_env_path
+ * get_env_path_array - Getting all env paths
  * Description: Permits to get the array of environment source paths
  * Return: Array of environment paths
  */
@@ -67,7 +67,7 @@ return (paths);
 }
 
 /**
- * extract_path_from_bin
+ * extract_path_from_bin - Bin path collector
  * @filename: The file to be found
  * Description: Permits to get the array of environment source paths
  * Return: The path of the given filename if found or NULL otherwise

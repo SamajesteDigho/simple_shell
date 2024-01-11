@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- * executor
+ * executor - The executor function
  * @command: Array containing the command and its parameters
  * @env: Array containing the env variables
  * Description: Execute a given process or file.
