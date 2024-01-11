@@ -19,7 +19,7 @@ if (process != -1 && process == 0)
 {
 if (execve(path, command, env) == -1)
 {
-perror("command[0] Inside");
+perror(command[0]);
 exit(98);
 }
 exit(0);

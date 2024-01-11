@@ -14,7 +14,7 @@ exit(0);
 }
 else if (strncmp(state, "exit", 4) == 0)
 {
-exit(0);
+exit(2);
 }
 }
 
