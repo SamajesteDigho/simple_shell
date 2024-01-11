@@ -19,9 +19,12 @@ strcat(prefix, " $ ");
 }
 else
 {
-prefix = "($) ";
+prefix = "";
 }
 input = (char *)malloc(MAX_BUFFER_SIZE * sizeof(char));
+if (argv[1] != NULL) {
+    input = argv[1];
+}
 while (1 == 1)
 {
 print_console(input, prefix);

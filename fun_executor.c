@@ -22,6 +22,7 @@ if (execve(path, command, env) == -1)
 perror(command[0]);
 exit(98);
 }
+exit(0);
 }
 wait(&status);
 }

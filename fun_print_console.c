@@ -10,7 +10,7 @@ void manage_special_keys(char *state)
 /* If CTRL+D was pressed */
 if (state == NULL)
 {
-printf("exit\n");
+printf("\n");
 exit(0);
 }
 else if (strncmp(state, "exit", 4) == 0)
@@ -59,7 +59,6 @@ char *state;
 do {
 printf("%s", prefix);
 state = fgets(input, MAX_BUFFER_SIZE, stdin);
-/* state = _getline(input, MAX_BUFFER_SIZE, stdin); */
 manage_special_keys(state);
 } while (input[0] == '\n');
 }
