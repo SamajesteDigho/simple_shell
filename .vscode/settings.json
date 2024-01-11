@@ -3,6 +3,7 @@
         "string.h": "c",
         "unistd.h": "c",
         "shell.h": "c",
-        "wait.h": "c"
+        "wait.h": "c",
+        "stat.h": "c"
     }
 }

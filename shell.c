@@ -15,7 +15,7 @@ char **commands;
 if (argc > 1)
 {
 prefix = argv[1];
-strcat(prefix, "$ ");
+strcat(prefix, " $ ");
 }
 else
 {
