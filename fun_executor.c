@@ -19,7 +19,7 @@ if (process != -1 && process == 0)
 {
 if (execve(path, command, env) == -1)
 {
-perror("Error");
+perror(command[0]);
 exit(98);
 }
 }
@@ -27,6 +27,6 @@ wait(&status);
 }
 else
 {
-printf("Error: Unknown command <%s>\n", command[0]);
+perror(command[0]);
 }
 }
