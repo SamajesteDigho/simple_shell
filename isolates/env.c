@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 /**
- * _getnv
+ * get_env_value - Getting env value given name
  * @name: The name of the variable to be collected.
  * Description: Permits to collect the value of the env vars given the name.
  * Return: The vlue of the variable if it exist and NULL otherwise.
@@ -50,18 +50,16 @@ name_size = name_size + 2;
 i = name_size;
 while (cursor[i] != '\0' && cursor[i] != '\n' && i < 1024)
 {
-value[i - name_size] = cursor[i++];
+value[i - name_size] = cursor[i];
+i++;
 }
 cursor[i] = '\0';
 return (value);
 }
-else
-{
 return (NULL);
 }
-}
 /**
- * print_environment
+ * print_environment - Print the env variables
  * Description: Here is the main source file for entring the program
  * Return: Always returns 0
  */
